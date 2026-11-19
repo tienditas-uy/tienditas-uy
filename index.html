@@ -1,50 +1,205 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>tienditas.uy - Próximamente</title>
-<style>
-body { margin:0; font-family: Arial, sans-serif; background:#EAF6FD; display:flex; justify-content:center; padding:20px; }
-.card { background:white; max-width:520px; width:100%; padding:30px 22px; border-radius:24px; text-align:center; box-shadow:0 10px 30px rgba(0,0,0,0.1); }
-.logo { width:190px; height:190px; background:#8FC3E8; border:9px solid #0A7ABF; border-radius:50%; margin:0 auto 15px; position:relative; overflow:hidden; }
-.techo { position:absolute; top:55px; left:50%; transform:translateX(-50%); border-left:85px solid transparent; border-right:85px solid transparent; border-bottom:60px solid #EAB308; }
-.estrella { position:absolute; top:28px; left:50%; transform:translateX(-50%); color:#FFD700; font-size:26px; z-index:2; }
-.casa { position:absolute; bottom:0; left:50%; transform:translateX(-50%); width:125px; height:80px; background:#0A6AA8; }
-.puerta { position:absolute; bottom:0; left:14px; width:36px; height:55px; background:white; }
-.ventana { position:absolute; bottom:14px; right:12px; width:40px; height:40px; background:white; padding:4px; display:grid; grid-template-columns:1fr 1fr; gap:4px; }
-.ventana i { background:#0A6AA8; display:block; }
-h1 { color:#0A5E96; font-size:36px; margin:5px 0; }
-h1 b { color:#EAB308; }
-.sub { color:#0A7ABF; font-weight:bold; font-size:17px; margin-bottom:15px; }
-.badge { background:#FFF3B0; padding:9px 16px; border-radius:50px; font-weight:bold; color:#8A6D00; display:inline-block; margin:10px 0 15px; }
-p { color:#555; font-size:16px; line-height:1.6; }
-.links { margin-top:18px; font-weight:bold; }
-.links a { color:#0A7ABF; text-decoration:none; margin:0 6px; }
-.foot { margin-top:15px; font-size:12px; color:#999; }
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>tienditas.uy - Muy pronto abrimos</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background-color: #ebf6fc;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
+      color: #333333;
+    }
+
+    .card {
+      background-color: #ffffff;
+      border-radius: 24px;
+      padding: 40px 28px;
+      max-width: 420px;
+      width: 100%;
+      text-align: center;
+      box-shadow: 0 10px 30px rgba(0, 102, 178, 0.08);
+    }
+
+    .logo-container {
+      width: 185px;
+      height: 185px;
+      margin: 0 auto 22px auto;
+    }
+
+    .logo-container svg {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+
+    h1 {
+      font-size: 2.3rem;
+      font-weight: 800;
+      color: #006eb6;
+      letter-spacing: -0.5px;
+      margin-bottom: 6px;
+    }
+
+    h1 span {
+      color: #e2b426;
+    }
+
+    .subtitle {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: #0077c2;
+      margin-bottom: 24px;
+    }
+
+    .badge {
+      display: inline-block;
+      background-color: #fef0a6;
+      color: #7d6210;
+      font-weight: 700;
+      font-size: 0.9rem;
+      padding: 10px 22px;
+      border-radius: 50px;
+      letter-spacing: 0.5px;
+      margin-bottom: 28px;
+    }
+
+    .description {
+      font-size: 0.98rem;
+      line-height: 1.55;
+      color: #4a5568;
+      margin-bottom: 18px;
+    }
+
+    .social-links {
+      margin-top: 28px;
+      margin-bottom: 16px;
+      font-weight: 700;
+      font-size: 0.95rem;
+      color: #0077c2;
+    }
+
+    .social-links a {
+      color: #0077c2;
+      text-decoration: none;
+      margin: 0 6px;
+      transition: opacity 0.2s;
+    }
+
+    .social-links a:hover {
+      opacity: 0.75;
+      text-decoration: underline;
+    }
+
+    .footer {
+      font-size: 0.8rem;
+      color: #8896a6;
+    }
+  </style>
 </head>
 <body>
-<div class="card">
-<div class="logo">
-<div class="estrella">★</div>
-<div class="techo"></div>
-<div class="casa">
-<div class="puerta"></div>
-<div class="ventana"><i></i><i></i><i></i><i></i></div>
-</div>
-</div>
-<h1>tienditas<b>.uy</b></h1>
-<div class="sub">Las tienditas de Uruguay, te dan más</div>
-<div class="badge">✨ MUY PRONTO ABRIMOS ✨</div>
-<p>Estamos preparando algo muy lindo para que las tienditas de todo Uruguay puedan mostrarse, vender y crecer.</p>
-<p>Si tenés una tiendita y querés ser de las primeras, escribinos.</p>
-<div class="links">
-<a href="https://instagram.com/tienditas.uy">Instagram</a> •
-<a href="https://facebook.com/tienditas.uy">Facebook</a> •
-<a href="https://tiktok.com/@tienditas.uy">TikTok</a>
-</div>
-<div class="foot">© 2026 tienditas.uy - Hecho con ❤️ en Uruguay</div>
-</div>
+
+  <main class="card">
+    <!-- Nuevo Logo SVG idéntico a la imagen -->
+    <div class="logo-container">
+      <svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <!-- Degradados para el efecto 3D del techo y estrella -->
+          <linearGradient id="roofLeft" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#f7dc6f"/>
+            <stop offset="65%" stop-color="#e5b822"/>
+            <stop offset="100%" stop-color="#c49412"/>
+          </linearGradient>
+          <linearGradient id="roofRight" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#f4d03f"/>
+            <stop offset="50%" stop-color="#d4a017"/>
+            <stop offset="100%" stop-color="#a6780a"/>
+          </linearGradient>
+          <linearGradient id="starGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#fce570"/>
+            <stop offset="100%" stop-color="#cca016"/>
+          </linearGradient>
+        </defs>
+
+        <!-- Círculo exterior azul -->
+        <circle cx="200" cy="200" r="192" fill="#0077be"/>
+        <!-- Anillo blanco interno -->
+        <circle cx="200" cy="200" r="179" fill="#ffffff"/>
+        <!-- Fondo celeste -->
+        <circle cx="200" cy="200" r="171" fill="#82c2eb"/>
+
+        <!-- Cuerpo de la casa (Mitad izquierda azul claro) -->
+        <polygon points="96,195 200,115 200,328 96,328" fill="#007bc7"/>
+        <!-- Cuerpo de la casa (Mitad derecha azul más oscuro) -->
+        <polygon points="200,115 304,195 304,328 200,328" fill="#0066a8"/>
+
+        <!-- Techo triangular con borde superior e inferior -->
+        <!-- Ala izquierda del techo -->
+        <polygon points="200,66 64,196 96,196 200,115" fill="url(#roofLeft)"/>
+        <!-- Ala derecha del techo -->
+        <polygon points="200,66 336,196 304,196 200,115" fill="url(#roofRight)"/>
+        <!-- Línea sutil central del techo -->
+        <line x1="200" y1="66" x2="200" y2="115" stroke="#b5860d" stroke-width="1.5"/>
+
+        <!-- Estrella dorada bajo el pico del techo -->
+        <polygon points="200,130 205.5,145 221,145 208.5,154 213.5,169 200,160 186.5,169 191.5,154 179,145 194.5,145" fill="url(#starGrad)"/>
+
+        <!-- Puerta izquierda -->
+        <rect x="135" y="226" width="57" height="102" fill="#ffffff"/>
+        <!-- Detalles celestes interiores de la puerta -->
+        <rect x="145" y="236" width="37" height="34" fill="#82c2eb"/>
+        <rect x="145" y="280" width="37" height="38" fill="#82c2eb"/>
+        <!-- Picaporte redondo -->
+        <circle cx="182" cy="275" r="7.5" fill="#ffffff"/>
+        <circle cx="182" cy="275" r="5" fill="#82c2eb"/>
+
+        <!-- Ventana derecha -->
+        <rect x="215" y="219" width="66" height="62" fill="#ffffff"/>
+        <!-- 4 cristales celestes de la ventana -->
+        <rect x="223" y="227" width="22" height="20" fill="#82c2eb"/>
+        <rect x="251" y="227" width="22" height="20" fill="#82c2eb"/>
+        <rect x="223" y="253" width="22" height="20" fill="#82c2eb"/>
+        <rect x="251" y="253" width="22" height="20" fill="#82c2eb"/>
+      </svg>
+    </div>
+
+    <!-- Textos principales -->
+    <h1>tienditas<span>.uy</span></h1>
+    <p class="subtitle">Las tienditas de Uruguay, te dan más</p>
+
+    <div class="badge">✨ MUY PRONTO ABRIMOS ✨</div>
+
+    <p class="description">
+      Estamos preparando algo muy lindo para que las tienditas de todo Uruguay puedan mostrarse, vender y crecer.
+    </p>
+
+    <p class="description">
+      Si tenés una tiendita y querés ser de las primeras, escribinos.
+    </p>
+
+    <!-- Redes sociales -->
+    <div class="social-links">
+      <a href="#" target="_blank">Instagram</a> •
+      <a href="#" target="_blank">Facebook</a> •
+      <a href="#" target="_blank">TikTok</a>
+    </div>
+
+    <!-- Pie de página -->
+    <footer class="footer">
+      © 2026 tienditas.uy - Hecho con ❤️ en Uruguay
+    </footer>
+  </main>
+
 </body>
 </html>
