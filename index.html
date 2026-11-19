@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tienditas.uy - Encontrá tu tiendita</title>
+<style>
+  body{font-family:Arial,sans-serif;margin:0;background:#EAF6FF;color:#222}
+  header{background:#BFE6FF;padding:24px 16px;text-align:center}
+  header h1{margin:0;font-size:28px}
+  header p{margin:8px 0 0}
+  .search{max-width:600px;margin:-16px auto 16px;background:white;border-radius:20px;padding:12px;box-shadow:0 4px 12px rgba(0,0,0,.08);display:flex;gap:8px}
+  .search input{flex:1;border:none;outline:none;font-size:16px;padding:8px}
+  .search button{background:#FFE89A;border:none;border-radius:12px;padding:10px 16px;font-weight:bold;cursor:pointer}
+  .grid{max-width:900px;margin:0 auto;padding:16px;display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:16px}
+  .card{background:white;border-radius:18px;overflow:hidden;cursor:pointer;box-shadow:0 4px 12px rgba(0,0,0,.06)}
+  .card img{width:100%;height:150px;object-fit:cover}
+  .card div{padding:14px}
+  .card h3{margin:0}
+  .card p{margin:6px 0 0;color:#666;font-size:14px}
+  .detail{max-width:700px;margin:16px auto;background:white;border-radius:20px;padding:20px;display:none}
+  .detail img{width:100%;border-radius:14px}
+  .btn{display:inline-block;margin-top:12px;background:#25D366;color:white;padding:12px 18px;border-radius:12px;text-decoration:none;font-weight:bold}
+  .back{background:#eee;border:none;padding:8px 12px;border-radius:10px;cursor:pointer}
+</style>
+</head>
+<body>
+<header>
+  <h1>🛍️ Tienditas.uy</h1>
+  <p>Encontrá la tiendita de tu barrio</p>
+</header>
+
+<div class="search">
+  <input id="buscador" placeholder="Buscá por barrio, rubro o nombre...">
+  <button onclick="buscar()">Buscar</button>
+</div>
+
+<div id="lista" class="grid"></div>
+
+<div id="detalle" class="detail"></div>
+
+<script>
+const tiendas=[
+  {nombre:"Tiendita de Marta", barrio:"Pocitos", rubro:"Ropa", desc:"Ropa de mujer, talles reales y buena onda.", foto:"https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=800", whats:"59899000000"},
+  {nombre:"Dulce Hogar", barrio:"Cordón", rubro:"Repostería", desc:"Tortas caseras, alfajores y desayunos.", foto:"https://images.unsplash.com/photo-1486427944299-d1955d23e34d?w=800", whats:"59899000001"},
+  {nombre:"Verde Vivo", barrio:"Pocitos", rubro:"Plantas", desc:"Plantas de interior, macetas y asesoramiento.", foto:"https://images.unsplash.com/photo-1485955900006-10f4d324d411?w=800", whats:"59899000002"},
+];
+function mostrar(filtro=""){
+  const lista=document.getElementById("lista");
+  document.getElementById("detalle").style.display="none";
+  lista.style.display="grid";
+  const f=filtro.toLowerCase();
+  lista.innerHTML=tiendas.filter(t=>(t.nombre+t.barrio+t.rubro).toLowerCase().includes(f)).map((t,i)=>`
+    <div class="card" onclick="ver(${tiendas.indexOf(t)})">
+      <img src="${t.foto}"><div><h3>${t.nombre}</h3><p>${t.rubro} • ${t.barrio}</p></div>
+    </div>`).join("");
+}
+function ver(i){
+  const t=tiendas[i];
+  document.getElementById("lista").style.display="none";
+  const d=document.getElementById("detalle");
+  d.style.display="block";
+  d.innerHTML=`<button class="back" onclick="mostrar()">← Volver</button><h2>${t.nombre}</h2><p>${t.rubro} • ${t.barrio}</p><img src="${t.foto}"><p>${t.desc}</p><a class="btn" href="https://wa.me/${t.whats}">Hablar por WhatsApp</a>`;
+}
+function buscar(){ mostrar(document.getElementById("buscador").value); }
+mostrar();
+</script>
+</body>
+</html>
