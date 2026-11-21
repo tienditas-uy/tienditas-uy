@@ -4,11 +4,22 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>tienditas.uy — Muy pronto abrimos</title>
+  <meta name="description" content="Las tienditas de Uruguay, te dan más. Nuestra misión: visibilizar y hacer crecer a los pequeños emprendimientos." />
+
+  <!-- Metadatos para compartir en WhatsApp y redes sociales -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="tienditas.uy — Muy pronto abrimos" />
+  <meta property="og:description" content="Las tienditas de Uruguay, te dan más. Visibilizamos y hacemos crecer a los pequeños emprendimientos." />
+  <meta property="og:url" content="https://tienditas.uy/" />
+  <!-- Descomentá y ajustá esta línea si querés mostrar una imagen al compartir el enlace -->
+  <!-- <meta property="og:image" content="https://tienditas.uy/1795219302031.jpg" /> -->
+
   <style>
     :root {
       --bg-page: #eef4f9;
       --card-bg: #ffffff;
       --blue-primary: #0b63a5;
+      --blue-hover: #084c80;
       --gold-accent: #e0a81b;
       --text-main: #4a5568;
       --badge-bg: #fef4c8;
@@ -118,6 +129,28 @@
       text-decoration: underline;
     }
 
+    .cta-wrap {
+      margin: 22px 0;
+    }
+
+    .cta-btn {
+      display: inline-block;
+      background-color: var(--blue-primary);
+      color: #ffffff;
+      font-size: 0.95rem;
+      font-weight: 600;
+      text-decoration: none;
+      padding: 12px 26px;
+      border-radius: 50px;
+      box-shadow: 0 4px 10px rgba(11, 99, 165, 0.25);
+      transition: transform 0.2s ease, background-color 0.2s ease;
+    }
+
+    .cta-btn:hover {
+      background-color: var(--blue-hover);
+      transform: translateY(-2px);
+    }
+
     footer {
       font-size: 0.82rem;
       color: #8a94a6;
@@ -131,7 +164,7 @@
 <body>
   <main class="card">
     <div class="logo-box">
-      <!-- Reemplaza "escudo-tienditas.jpg" por la ruta o URL real de tu imagen del escudo -->
+      <!-- Asegurate de que "1795219302031.jpg" esté en la misma carpeta que este archivo -->
       <img src="1795219302031.jpg" alt="Escudo de tienditas.uy" />
     </div>
 
@@ -141,7 +174,7 @@
     <div class="badge">✨ MUY PRONTO ABRIMOS ✨</div>
 
     <p class="copy">
-     Nuestra Misión, visibilizar y hacer crecer a los pequeños emprendimientos.
+      Nuestra misión: visibilizar y hacer crecer a los pequeños emprendimientos.
     </p>
 
     <p class="copy">
@@ -150,38 +183,20 @@
 
     <nav class="socials" aria-label="Redes sociales">
       <a href="https://instagram.com/tienditas.uy" target="_blank" rel="noopener noreferrer">Instagram</a>
-      <span>•</span>
+      <span aria-hidden="true">•</span>
       <a href="https://facebook.com/tienditas.uy" target="_blank" rel="noopener noreferrer">Facebook</a>
-      <span>•</span>
+      <span aria-hidden="true">•</span>
       <a href="https://tiktok.com/@tienditas.uy" target="_blank" rel="noopener noreferrer">TikTok</a>
     </nav>
-    <!-- Cartelito de registro de emprendimiento -->
-<div style="margin: 22px 0;">
-  <a href="https://forms.gle/8yaiQD4YsmshL2M99" 
-     target="_blank" 
-     rel="noopener noreferrer"
-     style="
-       display: inline-block;
-       background-color: #006d9c;
-       color: #ffffff;
-       font-family: inherit;
-       font-size: 15px;
-       font-weight: 600;
-       text-decoration: none;
-       padding: 12px 26px;
-       border-radius: 50px;
-       box-shadow: 0 4px 10px rgba(0, 109, 156, 0.25);
-       transition: transform 0.2s ease, background-color 0.2s ease;
-     "
-     onmouseover="this.style.backgroundColor='#005377'; this.style.transform='translateY(-2px)';"
-     onmouseout="this.style.backgroundColor='#006d9c'; this.style.transform='translateY(0)';">
-    Registrá tu emprendimiento
-  </a>
-</div>
 
+    <div class="cta-wrap">
+      <a href="https://forms.gle/8yaiQD4YsmshL2M99" target="_blank" rel="noopener noreferrer" class="cta-btn">
+        Registrá tu emprendimiento
+      </a>
+    </div>
 
     <footer>
-      © 2026 tienditas.uy - Hecho con <span class="heart">♥</span> en Uruguay
+      © 2026 tienditas.uy - Hecho con <span class="heart" aria-hidden="true">♥</span> en Uruguay
     </footer>
   </main>
 </body>
